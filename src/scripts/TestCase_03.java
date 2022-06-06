@@ -1,3 +1,5 @@
+package scripts;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +16,7 @@ public class TestCase_03 {
         And user should be able to see heading4 as "SEND US A MESSAGE"
          */
         WebDriver driver = Driver.goToComfy(); // setting property, instantiating, maximazing, waiting and navigating to main web page and going to “CONTACT US” page
-        WebElement contactUsHeading2 = driver.findElement(By.xpath("//h2[@data-ux='SectionHeading']/span"));
+        WebElement contactUsHeading2 = driver.findElement(By.xpath("//h2[@data-ux='SectionHeading']/span")); //
         WebElement sendAMess = driver.findElement(By.xpath("//h4[@data-ux='HeadingMinor']"));
 
         System.out.println(contactUsHeading2.isDisplayed() && contactUsHeading2.getText().equals("Contact Us"));

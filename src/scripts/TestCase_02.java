@@ -1,3 +1,5 @@
+package scripts;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +22,7 @@ public class TestCase_02 {
         driver.get("https://comfyelite.com/");
         driver.findElement(By.xpath("//*[text()='Contact Us']")).click();
 
-        WebElement connectWithUs = driver.findElement(By.xpath("//h1[@role='heading']/span"));
+        WebElement connectWithUs = driver.findElement(By.xpath("//h1[@role='heading']/span")); //By.tagName("h1")- because usually it is unique
         WebElement facebookIconLink = driver.findElement(By.xpath("//div[@data-aid='SOCIAL_SOCIAL_LINKS']/a[1]"));
         WebElement instagramIconLink = driver.findElement(By.xpath("//div[@data-aid='SOCIAL_SOCIAL_LINKS']/a[2]"));
 

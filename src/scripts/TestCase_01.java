@@ -1,3 +1,5 @@
+package scripts;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,16 +20,16 @@ public class TestCase_01 {
          */
         WebDriver driver = Driver.getDriver();
         driver.get("https://comfyelite.com/");
-        driver.findElement(By.xpath("//*[text()='Contact Us']")).click();
-        System.out.println("User is on Contact us page - " + driver.getCurrentUrl().equals("https://comfyelite.com/contact-us"));
+        driver.findElement(By.xpath("//a[text()='Contact Us']")).click();
+        System.out.println("User is on Contact us page - " + driver.getCurrentUrl().equals("https://comfyelite.com/contact-us")); // we can also validate title, because it will be changed
         WebElement comfyEliteLogo = driver.findElement(By.xpath("//a[@title='COMFY ELITE']/div/img"));
         WebElement headind2 = driver.findElement(By.id("dynamic-tagline-48605"));
-      //  WebElement headind22 = driver.findElement(By.xpath("//h2[@data-ux='Tagline']"));
+        //  WebElement headind22 = driver.findElement(By.xpath("//h2[@data-ux='Tagline']"));
 
 
         System.out.println("COMFY ELITE logo is displayed - " + (comfyEliteLogo.isDisplayed() && comfyEliteLogo.getAttribute("alt").equals("COMFY ELITE")));
         System.out.println("Heading2 is displayed - " + (headind2.isDisplayed() && headind2.getText().equals("High quality comfy pillows and accessories for travel, office and home.")));
-       // System.out.println(headind22.isDisplayed());
+        // System.out.println(headind22.isDisplayed());
         Driver.quitDriver();
 
     }
